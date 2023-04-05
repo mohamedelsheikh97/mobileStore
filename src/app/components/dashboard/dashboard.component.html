@@ -1,0 +1,28 @@
+<div class="bg-primary-subtle mt-5">
+  <div class="container">
+    <button class="btn btn-primary mb-3" [routerLink]="['/form']">Add new product</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">price</th>
+          <th scope="col">description</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <th scope="row">{{product.id}}</th>
+          <td>{{product.name}}</td>
+          <td>{{product.Price}}</td>
+          <td>{{product.description}}</td>
+          <td>
+            <button class="btn btn-warning mx-2" [routerLink]="['/dashboard/',product.id] ">Edit product</button>
+            <button class="btn btn-danger" (click)="removeProduct(product.id)">Delete product</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

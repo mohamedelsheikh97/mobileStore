@@ -1,0 +1,19 @@
+<div class="card mb-3 mt-3" style="max-width: 1000px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src={{product.img}} class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">{{product.description}}</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ducimus quisquam aliquid pariatur impedit perferendis ullam at, ex veniam libero eum deserunt! Qui laborum architecto nemo aspernatur, fuga minus perferendis.</p>
+        <div class="d-flex justify-content-between mt-5 align-center">
+          <button class="btn btn-primary" (click)="add($event)">add to cart</button>
+          <p>{{product.Price|currency}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,23 @@
+<div class="mt-3">
+  <div class="container bg-secondary p-3">
+  <form [formGroup]="loginForm" (ngSubmit)="login($event)">
+    <div class="mb-3">
+      <label for="name" class="form-label">User name</label>
+      <input type="text" class="form-control" id="name" formControlName="name">
+      <ng-container *ngIf="getName.touched">
+        <p *ngIf="getName.hasError('required')">Name is required</p>
+        <p *ngIf="getName.hasError('pattern')">not valid Name</p>
+      </ng-container>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">password</label>
+      <input type="password" class="form-control" id="description" formControlName="description">
+      <ng-container *ngIf="getDescription.touched">
+        <p *ngIf="getDescription.hasError('required')">description is required</p>
+        <p *ngIf="getDescription.hasError('minLength')">Length should be more than two</p>
+      </ng-container>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+  </div>
+  </div>

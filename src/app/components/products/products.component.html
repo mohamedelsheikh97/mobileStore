@@ -1,0 +1,21 @@
+<div class="products mt-4">
+  <div class="container">
+    <div class="text-center"><h2>products</h2></div>
+      <div class="row" >
+        <div class="card col-lg-3 col-mg-6 col-sm-12 g-2 mx-2" style="width: 18rem;" *ngFor="let product of products" >
+          <img [src]="product.img" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">{{product.description}}</p>
+            <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-primary"  [routerLink]="['/product-details/',product.id] " >view details</a>
+            <span>{{product.Price | currency}}</span>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
